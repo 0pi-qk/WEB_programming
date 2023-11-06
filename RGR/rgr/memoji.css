@@ -1,0 +1,198 @@
+/* Common styles */
+body {
+    background-color: #cfd0cf;
+    margin: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    font: 60px 'Chewy', cursive;
+    color: #293642;
+}
+
+.button {  
+    font: 20px 'Chewy', cursive;   
+    color: rgb(255, 253, 226);
+    padding: 8px 30px;
+    margin: 10px;
+    background: linear-gradient(90deg, #16668d, #22ab93);
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.button:active {
+    box-shadow: inset 2px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+/* Main menu */
+.main_menu {
+    display: flex;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-60deg, #5e912b, #50a54a);
+    z-index: 2;
+}
+
+.menu_frame {
+    margin: auto;
+    width: 50%;
+    height: 540px;
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.headers {
+    display: inline-block;
+    height: 50%;
+}
+
+.menu_header_game {
+    font-size: 75px;
+}
+
+.menu_header_author {
+    text-align: right;
+    font-size: 13px;
+    margin-top: -35px;
+}
+
+.difficult_levels {
+    margin: -30px 0 0 0;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 20px 0px 15px;
+    border-radius: 10px; 
+}
+
+.easy_mode_card {
+    background-color: rgb(39, 240, 73);
+}
+
+.normal_mode_card {
+    background-color: rgb(237, 240, 39);
+}
+
+.hard_mode_card {
+    background-color: rgb(240, 39, 39);
+}
+
+.mode_card {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 45px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.mode_card:active {
+    box-shadow: inset 2px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.mode_card:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio]:checked + label {
+    animation: animate_difficult_level 0.3s ease 1;
+    transform: rotateZ(11deg);
+}
+
+.choose_level_text {
+    font-size: 20px;
+    margin: 20px 0 15px 0;
+}
+
+.game_start_button {
+    margin-top: 60px;
+    font-size: 25px;
+    background: #30a0a0;
+}
+
+@keyframes animate_difficult_level {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(11deg);
+    }
+}
+
+/* Game field */
+.game_field {
+    display: flex;
+    margin: 42px auto;
+    flex-wrap: wrap;
+}
+
+.game_field > div {
+
+    perspective: 600px;
+}
+
+.game_field > div:hover {
+    opacity: 0.9;
+    cursor:pointer;
+}
+
+.card_closed {
+    background: linear-gradient(45deg, #22ab93, #16668d);
+}
+
+.card_opened {
+    text-align: center;
+    background: white;
+    font-size: 75px;
+}
+
+.cards_are_same {
+    pointer-events: none;
+}
+
+.cards_are_different {
+    background-color: #F44336;
+    pointer-events: none;
+}
+
+.timer {
+    text-align: center;
+    line-height: 36px;
+    font-size: 32px;
+}
+
+/* Result window */
+.fade {
+    display: none;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.result_window {
+    margin: auto;
+    min-width: 350px;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+}
+
